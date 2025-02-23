@@ -42,6 +42,9 @@ class ModelEvaluation:
         try:
             bucket_name = self.model_eval_config.bucket_name
             model_path=self.model_eval_config.s3_model_key_path
+            print("bucket_name: ",bucket_name)
+            print("model_path: ",model_path)
+    
             proj1_estimator = Proj1Estimator(bucket_name=bucket_name,
                                                model_path=model_path)
 
